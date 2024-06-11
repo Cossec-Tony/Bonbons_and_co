@@ -1,5 +1,9 @@
 <?php 
 include_once('head.php');
+
+session_start();
+
+
 ?>
 
 <body>

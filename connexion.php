@@ -1,6 +1,10 @@
 <?php
 include_once('head.php');
 ?>
+
+
+
+
 <body>
     <?php
         include_once('header.php');
@@ -14,7 +18,7 @@ include_once('head.php');
                 
                 <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password" placeholder="Password" required>
-                
+                                
                 <input type="submit" value="Envoyer">
             </form>
         </section>

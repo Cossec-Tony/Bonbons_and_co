@@ -1,17 +1,36 @@
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 header{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    background-color: #F36DA8;
+    font-family: "Itim", cursive;
+    font-size: 1.3rem;
 }
 
 .logo{
     max-height: 100px;
     max-width: 100px;
+    border-radius: 58px;
+    margin-left: 710px;
+    margin-top: 10px;
 }
 
-.navigation{
+#navigation{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-left: 200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
+
+.bouton-nav:hover{
+    background-color: #fc95c1;
+    border-radius: 10px;
+}
+

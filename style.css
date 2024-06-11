@@ -1,33 +1,26 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     background-color: #FFEBCD;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     background-color: #F36DA8;
     font-family: "Itim", cursive;
     font-size: 1.3rem;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
     text-align: center;
 }
 
-.logo{
+.logo {
     max-height: 100px;
     max-width: 100px;
     border-radius: 58px;
-
 }
-
 
 .box-logo {
     padding-top: 5px;
@@ -35,39 +28,49 @@ header{
     justify-content: center;
 }
 
-#navigation{
+#navigation {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 200px;
+    justify-content: center;
     margin-top: 30px;
     margin-bottom: 10px;
 }
 
-.bouton-nav:hover{
-    background-color: #fc95c1;
-    border-radius: 10px;
+#navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#bonbon{
+#navigation li {
+    margin: 0 155px; /* Add space between items */
+}
+
+.bouton-nav:hover {
+    background-color: #fc95c1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#bonbon {
     max-height: 800px;
     max-width: 400px;
 }
 
-#page-produit{
+#page-produit {
     display: flex;
     flex-direction: row;
     margin-top: 100px;
     margin-left: 300px;
 }
 
-.desc{
+.desc {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 150px;
 }
 
-#name{
+#name {
     margin-bottom: 30px;
 }

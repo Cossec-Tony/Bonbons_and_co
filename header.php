@@ -4,7 +4,7 @@ include_once('head.php');
 
 <body>
     <header>
-        <img class="logo" src="03.jpg" alt="logo confiz">
+        <img class="logo" src="img/03.jpg" alt="logo confiz">
         <nav id="navigation">
             <p class="bouton-nav">Accueil</p>
             <p class="bouton-nav">Boutiques</p>

@@ -16,6 +16,12 @@ header{
     font-size: 1.3rem;
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .logo{
     max-height: 100px;
     max-width: 100px;

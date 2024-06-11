@@ -11,9 +11,9 @@ include_once('head.php');
         <section class="box-nav">
             <nav id="navigation">
                 <ul>
-                    <li class='bouton-nav'>Accueil</li>
-                    <li class='bouton-nav'>Boutiques</li>
-                    <li class='bouton-nav'>Connexion</li>
+                    <a href="./index.php"><li class='bouton-nav'>Accueil</li></a> 
+                    <a href="./boutiques.php"><li class='bouton-nav'>Boutiques</li></a>
+                    <a href="./connexion.php"><li class='bouton-nav'>Connexion</li></a>
                 </ul>
             </nav>       
         </section>

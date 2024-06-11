@@ -46,6 +46,10 @@ header {
     margin: 0 155px; /* Add space between items */
 }
 
+.bouton-nav{
+    color: black;
+}
+
 .bouton-nav:hover {
     background-color: #fc95c1;
     border-radius: 10px;
@@ -73,4 +77,8 @@ header {
 
 #name {
     margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
 }

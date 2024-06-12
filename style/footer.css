@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #F36DA8;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.copy{
+    margin-top: 50px;
+}

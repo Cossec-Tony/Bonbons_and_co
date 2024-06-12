@@ -14,4 +14,7 @@ include_once('header.php');
             <div><p class="prod-desc">Prix :</p></div>
             <div><p class="prod-desc">Description :</p></div>
 </section>
+<?php
+include_once('footer.php')
+?>
 </body>

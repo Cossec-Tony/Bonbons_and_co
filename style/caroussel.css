@@ -1,0 +1,59 @@
+.container{
+    overflow: hidden;
+}
+
+.carousel{
+    position: relative;
+}
+
+.carousel-inner{
+    display: flex;
+    overflow: hidden;
+    height: 50vh;
+    flex-wrap: nowrap;
+}
+
+.slide{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.controles{
+    position: absolute;
+    z-index: 5;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controles button{
+    padding: 10px;
+    background-color: #fc95c1;
+}
+
+.carousel-dots {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    right: 50%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-dots .dot {
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carousel-dots .active {
+    border: 10px solid #761530 !important;
+}
+
+.carousel-dots .inactive {
+    border: 10px solid #2596be;
+}

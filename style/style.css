@@ -101,7 +101,7 @@ a{
     align-items: center;
 }
 
-#bbdm{
+.gtitre{
     font-family: "Julius Sans One", sans-serif;
     display: flex;
     justify-content: center;
@@ -109,3 +109,34 @@ a{
     margin-bottom: 60px;
     font-size: 2.5rem;
 }
+
+#magmom{
+    margin-top: 90px;
+}
+
+.car2container img{
+    height: 200px;
+    width: 130px;
+    margin: 30px;
+}
+
+.car2container {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    animation: deplpacementHorizontal 120s linear infinite;
+    /* Propriétés additionnelles non nécessaires sont supprimées */
+    animation-direction: normal;
+    animation-fill-mode: all;
+    animation-play-state: initial;
+}
+
+@keyframes deplpacementHorizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+ 

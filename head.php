@@ -13,4 +13,7 @@
     <link rel="stylesheet" href="./style/form.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/caroussel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>

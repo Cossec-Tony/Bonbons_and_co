@@ -11,7 +11,7 @@
     (2, 'OK Bonbons', 2, '20', 'Avenue des Friandises', '69001', 'Lyon', 'France'),
     (3, 'Saccharo', 3, '30', 'Boulevard des Saveurs', '13001', 'Marseille', 'France');
 
-    -- Table confiseries
+    -- Table confiseriesx   
     INSERT INTO confiseries(id, nom, type, prix, illustration, description) VALUES
     (1, 'Tagada', 'Acide', 1.99, '', 'Bonbon acide Haribo délicieux'),
     (2, 'Car en Sac', 'Douceur', 2.49, '', 'Caramel fondant au beurre salé Haribo'),

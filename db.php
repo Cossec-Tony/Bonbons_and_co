@@ -19,21 +19,17 @@ try {
         DB_USERNAME,
         DB_PASSWORD
     );
+    $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $PDO->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (Exception $ex) {
     echo ($ex->getMessage());
     die;
 }
 
-/*
-* requete() est une fonction basique pour interroger la base de donnée définie au dessus.
-* Il vous est demandé d'utiliser les fonctions préparées avec PDO, voir la doc officielle
-* donc cette fonction ne sera pas suffisante, vous devrez en créer d'autres plus pertinentes.
-*
-* Pour éviter les conflits il est plus pertinent d'écrire les nouvelles fonctions dans un autre fichier
-*/
-
-function requete($sql){
+function requete_preparee($sql, $params) {
     global $PDO;
-    $stmt = $PDO->query($sql);
+    $stmt = $PDO->prepare($sql);
+    $stmt->execute($params);
     return $stmt->fetchAll();
 }
+?>

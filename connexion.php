@@ -8,7 +8,7 @@ include_once('head.php');
     ?>
     <main>
         <section class="form-container">
-            <h2>Inscription Utilisateur</h2>
+            <h2>Connexion</h2>
             <form action="submit.php" method="post">    
                 <label for="username">Nom d'utilisateur:</label>
                 <input type="text" id="username" name="username" placeholder="Username" required>

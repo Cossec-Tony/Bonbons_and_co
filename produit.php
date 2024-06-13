@@ -1,6 +1,7 @@
 <?php
 include_once('head.php');
 include_once('header.php');
+require 'db.php';
 ?>
 <body>
     <section id="page-produit">

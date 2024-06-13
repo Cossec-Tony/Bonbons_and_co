@@ -4,6 +4,7 @@ include_once('header.php');
 require 'db.php';
 ?>
 
+<div class="backbutton"><img src="retour" alt="retour"></div>
 <?php
 if (isset($_GET['boutique_id'])) {
     $boutique_id = $_GET['boutique_id'];

@@ -36,22 +36,25 @@ $boutique = $boutique_details[0];
 
 <body>
     <div class="shop-detail">
-        <img class="img_boutique" src="./img/boutiqueImg.jpg" alt="">
         <h1><?php echo htmlspecialchars($boutique['boutique_nom']); ?></h1>
-        <p><?php echo htmlspecialchars("{$boutique['numero_rue']} {$boutique['nom_adresse']}, {$boutique['code_postal']} {$boutique['ville']}, {$boutique['pays']}"); ?></p>
+        <img class="img_boutique" src="./img/boutiqueImg.jpg" alt="">
+        <p><?php echo htmlspecialchars("{$boutique['numero_rue']} {$boutique['nom_adresse']}, {$boutique['code_postal']} {$boutique['ville']}, {$boutique['pays']}"); ?></p><br>
         <h2>Bonbons en stock :</h2>
         <ul>
+        <div class='bonbons'>
             <?php
             foreach ($boutique_details as $row) {
                 if ($row['confiserie_nom']) {
-                    echo "
+                    echo "  
                     <a href='produit.php?produit_id={$row['confiserie_id']}'>
-                    <li>{$row['confiserie_nom']}: {$row['quantite']} en stock</li>
+                    <img class='img_bonbon' src='./img/bonbon1.jpg' alt=''>
+                    <p>{$row['confiserie_nom']}: {$row['quantite']} en stock</p>
                     </a>
                     ";
                 } 
             }
             ?>
+            </div>
         </ul>
     </div>
 </body>

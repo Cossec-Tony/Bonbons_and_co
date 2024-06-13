@@ -16,6 +16,7 @@ $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <body>
+    <h1 class="gtitre">Nos boutiques</h1>
     <div class="shops">
         <?php
         $current_boutique = null;

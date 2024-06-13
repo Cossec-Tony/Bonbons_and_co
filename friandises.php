@@ -37,8 +37,8 @@ $boutique = $boutique_details[0];
 <body>
     <div class="shop-detail">
         <img class="img_boutique" src="./img/boutiqueImg.jpg" alt="">
-        <h1><?php echo htmlspecialchars($boutique['boutique_nom']); ?></h1>
-        <p><?php echo htmlspecialchars("{$boutique['numero_rue']} {$boutique['nom_adresse']}, {$boutique['code_postal']} {$boutique['ville']}, {$boutique['pays']}"); ?></p>
+        <h1><?php echo ($boutique['boutique_nom']); ?></h1>
+        <p><?php echo ("{$boutique['numero_rue']} {$boutique['nom_adresse']}, {$boutique['code_postal']} {$boutique['ville']}, {$boutique['pays']}"); ?></p>
         <h2>Bonbons en stock :</h2>
         <ul>
             <?php

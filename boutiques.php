@@ -51,8 +51,6 @@ $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     <?php
         include_once('footer.php');
     ?>
-</body>
-</html>
 
 
 <?php

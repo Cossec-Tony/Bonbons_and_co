@@ -7,7 +7,10 @@ footer{
     background-color: #F36DA8;
     padding: 20px 0;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-bottom: -30px;
 }
 
 .copy{

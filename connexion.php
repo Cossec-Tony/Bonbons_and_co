@@ -17,7 +17,7 @@ include_once('head.php');
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <?php
                      if (isset($_GET['error'])) {
-                        echo '<span id="errorMessage" class="error">' . htmlspecialchars($_GET['error']) . '</span>';
+                        echo '<span id="errorMessage" class="error">' . ($_GET['error']) . '</span>';
                     } else {
                         echo '<span id="errorMessage" class="error" style="display: none;"></span>';
                     }

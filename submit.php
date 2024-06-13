@@ -17,8 +17,9 @@ function check_login($tap_username, $tap_password) {
         echo "<h1>GG ma loutre</h1>";
         return $result[0]['username'];
     } else {
-        echo "Votre nom d'utilisateur ou votre mot de passe est incorrect !";
-        echo "<h1>nom d'utilisateur ou mot de passe incorrect</h1>";
+        $error = urlencode("Votre nom d'utilisateur ou votre mot de passe est incorrect !");
+        header("Location: connexion.php?error=$error");
+        exit();
     }
 }
 

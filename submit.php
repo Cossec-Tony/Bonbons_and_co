@@ -7,9 +7,11 @@ function check_login($tap_username, $tap_password) {
     global $PDO;
 
     $tap_password = md5($tap_password);
+    
 
     $sql = "SELECT * FROM utilisateurs WHERE username = :username AND password = :password";
     $params = ['username' => $tap_username, 'password' => $tap_password];
+    // La magie prend vie
     $result = requete_preparee($sql, $params);
 
     if (!empty($result)) {

@@ -20,6 +20,17 @@ header {
     margin: -30px;
 }
 
+p{
+    text-decoration: none;
+}
+
+.bonbons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+}
+
 .logo {
     max-height: 100px;
     max-width: 100px;
@@ -31,6 +42,25 @@ header {
     padding-top: 5px;
     display: flex;
     justify-content: center;
+}
+
+.img_boutique{
+    width: 350px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img_bonbon{
+    width: 250px;
+    height: 300px;
+}
+
+.shop-detail{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 #navigation {
@@ -162,3 +192,4 @@ article p{
     font-family: "Itim", cursive;
     margin-top: -10px;
 }
+

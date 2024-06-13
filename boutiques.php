@@ -15,7 +15,6 @@ $sql = "
 $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<body>
     <div class="shops">
         <?php
         $current_boutique = null;
@@ -50,8 +49,6 @@ $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     <?php
         include_once('footer.php');
     ?>
-</body>
-</html>
 
 
 <?php

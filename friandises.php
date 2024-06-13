@@ -3,7 +3,9 @@
 include_once('head.php');
 include_once('header.php');
 require 'db.php';
+?>
 
+<?php
 if (isset($_GET['boutique_id'])) {
     $boutique_id = $_GET['boutique_id'];
 
@@ -35,6 +37,7 @@ $boutique = $boutique_details[0];
 
 <body>
     <div class="shop-detail">
+        <img class="img_boutique" src="./img/boutiqueImg.jpg" alt="">
         <h1><?php echo htmlspecialchars($boutique['boutique_nom']); ?></h1>
         <p><?php echo htmlspecialchars("{$boutique['numero_rue']} {$boutique['nom_adresse']}, {$boutique['code_postal']} {$boutique['ville']}, {$boutique['pays']}"); ?></p>
         <h2>Bonbons en stock :</h2>

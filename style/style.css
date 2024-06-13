@@ -1,10 +1,13 @@
-*{
+**{
     margin: 0;
     padding: 0;
+
 }
 
 body {
     background-color: #FFEBCD;
+    overflow-x: hidden;
+
 }
 
 header {
@@ -14,12 +17,14 @@ header {
     font-family: "Itim", cursive;
     font-size: 1.3rem;
     text-align: center;
+    margin: -30px;
 }
 
 .logo {
     max-height: 100px;
     max-width: 100px;
     border-radius: 58px;
+    margin-top: 30px;
 }
 
 .box-logo {
@@ -121,14 +126,25 @@ a{
 }
 
 .car2container {
-    height: 100px;
+    height: 300px;
     display: flex;
     flex-direction: row;
-    animation: deplpacementHorizontal 120s linear infinite;
+    animation: deplpacementHorizontal 90s linear infinite;
     /* Propriétés additionnelles non nécessaires sont supprimées */
     animation-direction: normal;
     animation-fill-mode: all;
     animation-play-state: initial;
+    margin-top: 30px;
+}
+
+article #train{
+    height: 100px;
+    width: 500px;
+    margin-right: -10px
+}
+
+#train img {
+    width: 300px;
 }
 
 @keyframes deplpacementHorizontal {
@@ -139,4 +155,9 @@ a{
         transform: translateX(-100%);
     }
 }
- 
+
+article p{
+    text-align: center;
+    font-family: "Itim", cursive;
+    margin-top: -10px;
+}

@@ -6,7 +6,7 @@ include_once('head.php');
 <body>
     <header>
         <section class="box-logo">
-            <img class="logo" src="img/03.jpg" alt="logo confiz">    
+            <a href="./index.php"><img class="logo" src="img/03.jpg" alt="logo confiz"></a>    
         </section>
         
         <section class="box-nav">

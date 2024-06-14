@@ -159,7 +159,7 @@ a{
     height: 300px;
     display: flex;
     flex-direction: row;
-    animation: deplpacementHorizontal 90s linear infinite;
+    animation: deplpacementHorizontal 30s linear infinite;
     /* Propriétés additionnelles non nécessaires sont supprimées */
     animation-direction: normal;
     animation-fill-mode: all;

@@ -29,7 +29,7 @@ if (isset($_GET['produit_id'])) {
 <body>
     <section id="page-produit">
         <div id="divbonbon">
-            <img id="bonbon" src='<?php echo ($produit["illustration"]); ?>' alt='<?php echo ($produit["nom"]); ?>'>
+            <img id="bonbon" src='img/<?php echo ($produit["illustration"]); ?>' alt='<?php echo ($produit["nom"]); ?>'>
         </div>
         <div class="desc">
             <h2 id="name"><?php echo ($produit["nom"]); ?></h2>

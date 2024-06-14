@@ -91,9 +91,9 @@ p{
     cursor: pointer;
 }
 
-img #bonbon {
-    height: 800px;
-    width: 400px;
+img#bonbon {
+    height: 200px;
+    width: 170px;
     margin-bottom: 100px;
 }
 

@@ -46,14 +46,13 @@ $boutique = $boutique_details[0];
             <?php
             foreach ($boutique_details as $row) {
                 if ($row['confiserie_nom']) {
-                    echo "  
-                    <a href='produit.php?produit_id={$row['confiserie_id']}'>
-                    <img class='img_bonbon' src='./img/bonbon1.jpg' alt=''>
-                    <p>{$row['confiserie_nom']}: {$row['quantite']} en stock</p>
-                    </a>
-                    ";
+                    echo "<a href='produit.php?produit_id={$row['confiserie_id']}'>";
+                    echo "<img id='bonbon' src='img/{$row['illustration']}' alt='{$row['confiserie_nom']}'>";
+                    echo "<p>{$row['confiserie_nom']}: {$row['quantite']} en stock</p>";
+                    echo "</a>";
                 } 
             }
+
             ?>
             </div>
         </ul>

@@ -91,9 +91,9 @@ p{
     cursor: pointer;
 }
 
-#bonbon {
-    max-height: 800px;
-    max-width: 400px;
+img #bonbon {
+    height: 800px;
+    width: 400px;
     margin-bottom: 100px;
 }
 
@@ -127,6 +127,11 @@ a{
 
 .prod-desc{
     margin-top: 15px;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+#descript{
+    font-family: "Itim", cursive;
 }
 
 #divbonbon{

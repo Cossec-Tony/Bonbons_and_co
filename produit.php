@@ -33,9 +33,9 @@ if (isset($_GET['produit_id'])) {
         </div>
         <div class="desc">
             <h2 id="name"><?php echo ($produit["nom"]); ?></h2>
-            <div><p class="prod-desc">Type :</p><p><?php echo ($produit["type"]); ?></p></div>
-            <div><p class="prod-desc">Prix :</p><p><?php echo ($produit["prix"]); ?> €</p></div>
-            <div><p class="prod-desc">Description :</p><p><?php echo ($produit["description"]); ?></p></div>
+            <div><p class="prod-desc">Type :</p><p id="descript"><?php echo ($produit["type"]); ?></p></div>
+            <div><p class="prod-desc">Prix :</p><p id="descript"><?php echo ($produit["prix"]); ?> €</p></div>
+            <div><p class="prod-desc">Description :</p><p id="descript"><?php echo ($produit["description"]); ?></p></div>
         </div>
     </section>
 <?php

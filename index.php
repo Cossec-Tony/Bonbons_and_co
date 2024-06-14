@@ -20,10 +20,9 @@ include_once('header.php');
         <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
     <script src="script.js"></script>
-    <h2 class="gtitre" id="magmom">Les Magasins Du Moment</h2>
+    <h2 class="gtitre" id="magmom">Les Bonbons Du Moment</h2>
     <div class="car2container">
         <article id="train"><img src="img/train.png" alt="train"></article>
-        <article><img src="img/bonbon1.jpg" alt="bonbon 2"><p>nom de la boutique</p></article>
         <article><img src="img/bonbon2.jpg" alt="bonbon 2"></article>
         <article><img src="img/bonbon3.jpg" alt="bonbon 2"></article>
         <article><img src="img/bonbon1.jpg" alt="bonbon 2"></article>

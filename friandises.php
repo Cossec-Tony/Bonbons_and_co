@@ -11,7 +11,7 @@ if (isset($_GET['boutique_id'])) {
 
     // Récupération des informations de la boutique et des bonbons en stock
     $sql = "
-        SELECT b.nom AS boutique_nom, b.numero_rue, b.nom_adresse, b.code_postal, b.ville, b.pays, 
+        SELECT b.nom AS boutique_nom, b.numero_rue, b.nom_adresse, b.code_postal, c.illustration, b.ville, b.pays, 
                c.id AS confiserie_id, c.nom AS confiserie_nom, s.quantite
         FROM boutiques b
         LEFT JOIN stocks s ON b.id = s.boutique_id
@@ -43,17 +43,17 @@ $boutique = $boutique_details[0];
        <h2>Bonbons en stock :</h2>
         <ul>
         <div class='bonbons'>
-            <?php
-            foreach ($boutique_details as $row) {
-                if ($row['confiserie_nom']) {
-                    echo "<a href='produit.php?produit_id={$row['confiserie_id']}'>";
-                    echo "<img id='bonbon' src='img/{$row['illustration']}' alt='{$row['confiserie_nom']}'>";
-                    echo "<p>{$row['confiserie_nom']}: {$row['quantite']} en stock</p>";
-                    echo "</a>";
-                } 
-            }
+        <?php
+foreach ($boutique_details as $row) {
+    if (isset($row['confiserie_nom'])) {
+        echo "<a href='produit.php?produit_id={$row['confiserie_id']}'>";
+        echo "<img id='bonbon' src='img/{$row['illustration']}' alt='{$row['confiserie_nom']}'>";
+        echo "<p>{$row['confiserie_nom']}: {$row['quantite']} en stock</p>";
+        echo "</a>";
+    } 
+}
+?>
 
-            ?>
             </div>
         </ul>
     </div>

@@ -44,15 +44,6 @@ body {
     gap: 20px;
 }
 
-.shop, .candy {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    margin: 20px;
-}
 
 .shop-link {
     text-decoration: none;

@@ -41,7 +41,7 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
                 }
 
                 echo "
-                <a href='friandises.php?boutique_id={$row['id']}' class='shop-link'>
+                 <a href='friandises.php?" . (isset($_SESSION['user_id']) ? 'user_id=' . $_SESSION['user_id'] . '&' : '') . "boutique_id={$row['id']}' class='shop-link'>
                 <div class='shop'>
                     <img src='./img/boutiqueImg.jpg' alt='Image de la boutique' class='shop-image'>
                     <h2 class='shop-name'>{$row['boutique_nom']}</h2>

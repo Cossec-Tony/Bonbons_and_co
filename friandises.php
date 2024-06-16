@@ -71,9 +71,10 @@ if (isset($_SESSION['role']) && ($_SESSION['role'] === 'admin' || $_SESSION['rol
                         </a>
                         <?php if ($isAuthorized) : ?>
                             <form action='delete_produit.php' method='post' class='delete-form'>
-                                <input type='hidden' name='confiserie_id' value='<?php echo $row['confiserie_id']; ?>'>
-                                <button type='submit' class='delete-button'>Supprimer</button>
-                            </form>
+                            <input type='hidden' name='confiserie_id' value='<?php echo $row['confiserie_id']; ?>'>
+                            <input type='hidden' name='boutique_id' value='<?php echo $boutique_id; ?>'>
+                            <button type='submit' class='delete-button'>Supprimer</button>
+                        </form>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

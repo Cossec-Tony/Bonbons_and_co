@@ -6,8 +6,13 @@ $nom_bonbon = '';
 $prix = '';
 $description = '';
 $quantite_stock = '';
+$type_bonbon = ''; // Variable pour stocker le type de bonbon
 $errors = [];
 
+$isAuthorized = false;
+if (isset($_SESSION['role']) && ($_SESSION['role'] === 'admin' || $_SESSION['role'] === 'gerant')) {
+    $isAuthorized = true;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupérer données du formulaire
@@ -15,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prix = $_POST['prix'] ?? '';
     $description = $_POST['description'] ?? '';
     $quantite_stock = $_POST['quantite_stock'] ?? '';
+    $type_bonbon = $_POST['type_bonbon'] ?? ''; // Récupération du type de bonbon
 
     // Récupérer boutique_id depuis $_GET
     $boutique_id = $_GET['boutique_id'] ?? '';
@@ -31,11 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "La quantité en stock doit être un nombre positif.";
     }
 
+    // Ajoutez d'autres validations si nécessaire pour le type de bonbon
+
     if (empty($errors)) {
         try {
-            $sql = "INSERT INTO confiseries (nom, prix, illustration, description) VALUES (?, ?, 'bonbonsDivers.png', ?)";
+            $sql = "INSERT INTO confiseries (nom, prix, illustration, description, type) VALUES (?, ?, 'bonbonsDivers.png', ?, ?)";
             $stmt = $PDO->prepare($sql);
-            $stmt->execute([$nom_bonbon, $prix, $description]);
+            $stmt->execute([$nom_bonbon, $prix, $description, $type_bonbon]);
 
             // Récup id de la confiserie ajoutée
             $confiserie_id = $PDO->lastInsertId();
@@ -96,7 +104,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="description">Description :</label>
                 <textarea id="description" name="description"><?php echo htmlspecialchars($description); ?></textarea>
             </div>
+            <!-- Champ pour le type de bonbon -->
+            <div class="form-group">
+                <label for="type_bonbon">Type de bonbon :</label>
+                <select id="type_bonbon" name="type_bonbon" required>
+                    <option value="1">Chocolat</option>
+                    <option value="2">Gelée</option>
+                    <option value="3">Sucré</option>
+                    <option value="4">Autre</option>
+                </select>
+            </div>
+
             <button type="submit" class="submit-button">Ajouter</button>
+            
+            <?php if ($isAuthorized): ?>
+                <form action="add_produit.php?boutique_id=<?php echo $boutique_id; ?>" method="post" class="add-form">
+                    <a class="submit-button" href="liste_bonbons.php?boutique_id=<?php echo $boutique_id; ?>" class="add-existing-button">Ajouter un bonbon existant</a>
+                </form>
+            <?php endif; ?>
         </form>
     </main>
 

@@ -1,6 +1,5 @@
-<?php 
+<?php
 include_once('head.php');
-
 ?>
 
 <body>
@@ -12,9 +11,13 @@ include_once('head.php');
         <section class="box-nav">
             <nav id="navigation">
                 <ul>
-                    <a href="./index.php"><li class='bouton-nav'>Accueil</li></a> 
-                    <a href="./boutiques.php"><li class='bouton-nav'>Boutiques</li></a>
-                    <a href="./connexion.php"><li class='bouton-nav'>Connexion</li></a>
+                    <a href="./index.php<?php echo isset($_SESSION['user_id']) ? '?user_id=' . $_SESSION['user_id'] : ''; ?>"><li class='bouton-nav'>Accueil</li></a> 
+                    <a href="./boutiques.php<?php echo isset($_SESSION['user_id']) ? '?user_id=' . $_SESSION['user_id'] : ''; ?>"><li class='bouton-nav'>Boutiques</li></a>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <a href="./logout.php"><li class='bouton-nav'>Déconnexion</li></a>
+                    <?php else: ?>
+                        <a href="./connexion.php"><li class='bouton-nav'>Connexion</li></a>
+                    <?php endif; ?>
                 </ul>
             </nav>       
         </section>

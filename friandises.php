@@ -18,7 +18,7 @@ if (isset($_GET['boutique_id'])) {
         LEFT JOIN confiseries c ON s.confiserie_id = c.id
         WHERE b.id = ?
         ORDER BY c.nom
-    "; 
+    ";  
     $stmt = $PDO->prepare($sql);
     $stmt->execute([$boutique_id]);
     $boutique_details = $stmt->fetchAll(PDO::FETCH_ASSOC);

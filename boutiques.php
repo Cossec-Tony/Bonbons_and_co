@@ -1,9 +1,8 @@
 <?php
-include_once('head.php');
-include_once('header.php');
 require 'db.php';
+session_start();
 
-// Récupération des informations des boutiques et des stocks
+
 $sql = "
     SELECT b.id, b.nom AS boutique_nom, b.numero_rue, b.nom_adresse, b.code_postal, b.ville, b.pays, 
            c.nom AS confiserie_nom, s.quantite
@@ -13,6 +12,12 @@ $sql = "
     ORDER BY b.id, c.nom
 "; 
 $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+include_once('head.php');
+include_once('header.php');
+
+
+$isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
 ?>
 
 <body>
@@ -23,7 +28,15 @@ $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         foreach ($boutiques as $row) {
             if ($current_boutique !== $row['id']) {
                 if ($current_boutique !== null) {
-                    // Fin de la précédente boutique
+                   
+                    if ($isAdmin) {
+                        echo "
+                            <form action='delete_boutique.php' method='post' class='delete-form'>
+                                <input type='hidden' name='boutique_id' value='{$current_boutique}'>
+                                <button type='submit' class='delete-button'>Supprimer la boutique</button>
+                            </form>
+                        ";
+                    }
                     echo "</div>";
                 }
 
@@ -37,22 +50,33 @@ $boutiques = $PDO->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                 ";
                 $current_boutique = $row['id'];
             }
-            // Affichage des confiseries et de leurs quantités pour la boutique actuelle
+            
             if ($row['confiserie_nom']) {
                 echo "<p>- {$row['confiserie_nom']}: {$row['quantite']} en stock</p>";
             }
         }
+
         if ($current_boutique !== null) {
-            // Fin de la dernière boutique
+            
+            if ($isAdmin) {
+                echo "
+                    <form action='delete_boutique.php' method='post' class='delete-form'>
+                        <input type='hidden' name='boutique_id' value='{$current_boutique}'>
+                        <button type='submit' class='delete-button'>Supprimer la boutique</button>
+                    </form>
+                ";
+            }
             echo "</div>";
         }
         ?>
     </div>
-    <?php
-        include_once('footer.php');
-    ?>
 
+    <?php if ($isAdmin): ?>
+        <form action="add_boutique.php" method="post" class="add-form">
+            <button type="submit" class="add-button">Ajouter une boutique</button>
+        </form>
+    <?php endif; ?>
 
-<?php
-include_once('footer.php');
-?>
+    <?php include_once('footer.php'); ?>
+</body>
+</html>

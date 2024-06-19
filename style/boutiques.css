@@ -59,6 +59,9 @@ body {
 .shop-name, .candy-name {
     font-size: 1.5em;
     margin: 10px 0;
+    color: #3f3f3f;
+    font-family: "Itim", cursive;
+
 }
 
 .shop-address {
@@ -70,6 +73,9 @@ body {
 .shop-stock, .candy-stock {
     font-size: 1.2em;
     margin: 10px 0;
+    color: #3f3f3f;
+    font-family: "Itim", cursive;
+
 }
 
 
